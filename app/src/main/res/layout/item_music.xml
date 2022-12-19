@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/main_item_view_shape"
+    android:orientation="horizontal"
+    android:elevation="10dp">
+
+    <ImageView
+        android:id="@+id/ivAlbumImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/item_border_line_white"
+        android:padding="3dp"
+        android:src="@drawable/ic_default"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="7dp">
+
+        <TextView
+            android:id="@+id/tvArtist"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/ivItemLike"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toStartOf="@id/ivItemPlayList"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentBottom="true"
+            android:onClick="onClick"
+            android:src="@drawable/ic_like_empty" />
+
+        <ImageView
+            android:id="@+id/ivItemPlayList"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/ic_playlist_empty" />
+    </RelativeLayout>
+
+</LinearLayout>
